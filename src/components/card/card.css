@@ -13,7 +13,7 @@
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 95%);
-  --shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .2));
+  --shadow-img: drop-shadow(0 11px 11px hsla(0, 0%, 0%, 0.299));
   --filter-img: invert(1);
 
   /*========== Font and typography ==========*/
@@ -128,6 +128,17 @@ img {
   overflow: hidden; /* For animation ScrollReveal */
 }
 
+.menuContainer{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    padding-top: 6rem;
+    grid-template-columns: 250px;
+    justify-content: center;
+    row-gap: 6rem;
+}
+
 .productCard{
     position: relative;
     padding:6.25em 3rem;
@@ -145,9 +156,12 @@ img {
     z-index: -1;
     transform: skewY(4deg);
     transition: background-color .4s;
+    box-shadow: 0 8px 22px hsla(0, 0.9%, 0%, 0.126);
 }
 
 .productCard-img{
+    display: block;
+    height: auto;
     width:150px;
     position:absolute;
     top:-4rem;
@@ -159,7 +173,23 @@ img {
 }
 
 .productCard-title{
+    font-size: var(--h2-font-size);
+    font-family: 'Chicken Sans Regular';
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
 
+.productCard-subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    font-family: 'Chicken Sans Regular';
+    margin-bottom: .75rem;
+}
+
+.productCard-price{
+    font-size: var(--normal-font-size); 
+    font-weight: var(--font-semi-bold);
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
 }
 
 .productCard-button{
@@ -181,7 +211,7 @@ img {
 }
 
 .productCard-button:hover{
-    box-shadow: 0 8px 24px hsla(140, 40%, 48%, .3);
+    box-shadow: 0 8px 24px hsla(7, 100%, 50%, 0.3);
 }
 
 .productCard:hover .productCard-img{
